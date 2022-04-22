@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 450);
+            this.ClientSize = new System.Drawing.Size(552, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -147,6 +147,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "frmCustomerPreview";
             this.Text = "frmCustomerPreview";
+            this.Load += new System.EventHandler(this.frmCustomerPreview_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

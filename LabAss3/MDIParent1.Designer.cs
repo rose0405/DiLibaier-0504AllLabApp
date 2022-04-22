@@ -70,6 +70,8 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enterCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -82,11 +84,22 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enterCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtgCustomer = new System.Windows.Forms.DataGridView();
+            this.customerDBDataSet = new LabAss3.CustomerDBDataSet();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new LabAss3.CustomerDBDataSetTableAdapters.CustomerTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hobbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marriedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -103,7 +116,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(843, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1357, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -346,42 +359,42 @@
             // newWindowToolStripMenuItem
             // 
             this.newWindowToolStripMenuItem.Name = "newWindowToolStripMenuItem";
-            this.newWindowToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.newWindowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newWindowToolStripMenuItem.Text = "新建窗口(&N)";
             this.newWindowToolStripMenuItem.Click += new System.EventHandler(this.ShowNewForm);
             // 
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cascadeToolStripMenuItem.Text = "层叠(&C)";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
             // 
             // tileVerticalToolStripMenuItem
             // 
             this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tileVerticalToolStripMenuItem.Text = "垂直平铺(&V)";
             this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
             // 
             // tileHorizontalToolStripMenuItem
             // 
             this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tileHorizontalToolStripMenuItem.Text = "水平平铺(&H)";
             this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.closeAllToolStripMenuItem.Text = "全部关闭(&L)";
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
             // 
             // arrangeIconsToolStripMenuItem
             // 
             this.arrangeIconsToolStripMenuItem.Name = "arrangeIconsToolStripMenuItem";
-            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.arrangeIconsToolStripMenuItem.Text = "排列图标(&A)";
             this.arrangeIconsToolStripMenuItem.Click += new System.EventHandler(this.ArrangeIconsToolStripMenuItem_Click);
             // 
@@ -431,6 +444,21 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.aboutToolStripMenuItem.Text = "关于(&A) ... ...";
             // 
+            // customerToolStripMenuItem
+            // 
+            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enterCustomerToolStripMenuItem});
+            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.customerToolStripMenuItem.Text = "Customer";
+            // 
+            // enterCustomerToolStripMenuItem
+            // 
+            this.enterCustomerToolStripMenuItem.Name = "enterCustomerToolStripMenuItem";
+            this.enterCustomerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.enterCustomerToolStripMenuItem.Text = "Enter Customer";
+            this.enterCustomerToolStripMenuItem.Click += new System.EventHandler(this.enterCustomerToolStripMenuItem_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -445,7 +473,7 @@
             this.helpToolStripButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 28);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(843, 27);
+            this.toolStrip.Size = new System.Drawing.Size(1357, 27);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
@@ -520,10 +548,10 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 497);
+            this.statusStrip.Location = new System.Drawing.Point(0, 439);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(843, 26);
+            this.statusStrip.Size = new System.Drawing.Size(1357, 26);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -533,26 +561,94 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 20);
             this.toolStripStatusLabel.Text = "状态";
             // 
-            // customerToolStripMenuItem
+            // dtgCustomer
             // 
-            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enterCustomerToolStripMenuItem});
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
-            this.customerToolStripMenuItem.Text = "Customer";
+            this.dtgCustomer.AutoGenerateColumns = false;
+            this.dtgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.customerDataGridViewTextBoxColumn,
+            this.countryDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.hobbyDataGridViewTextBoxColumn,
+            this.marriedDataGridViewCheckBoxColumn});
+            this.dtgCustomer.DataSource = this.customerBindingSource;
+            this.dtgCustomer.Location = new System.Drawing.Point(553, 58);
+            this.dtgCustomer.Name = "dtgCustomer";
+            this.dtgCustomer.RowHeadersWidth = 51;
+            this.dtgCustomer.RowTemplate.Height = 27;
+            this.dtgCustomer.Size = new System.Drawing.Size(804, 284);
+            this.dtgCustomer.TabIndex = 4;
             // 
-            // enterCustomerToolStripMenuItem
+            // customerDBDataSet
             // 
-            this.enterCustomerToolStripMenuItem.Name = "enterCustomerToolStripMenuItem";
-            this.enterCustomerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.enterCustomerToolStripMenuItem.Text = "Enter Customer";
-            this.enterCustomerToolStripMenuItem.Click += new System.EventHandler(this.enterCustomerToolStripMenuItem_Click);
+            this.customerDBDataSet.DataSetName = "CustomerDBDataSet";
+            this.customerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.customerDBDataSet;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // customerDataGridViewTextBoxColumn
+            // 
+            this.customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
+            this.customerDataGridViewTextBoxColumn.HeaderText = "Customer";
+            this.customerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
+            this.customerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // countryDataGridViewTextBoxColumn
+            // 
+            this.countryDataGridViewTextBoxColumn.DataPropertyName = "Country";
+            this.countryDataGridViewTextBoxColumn.HeaderText = "Country";
+            this.countryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            this.countryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // hobbyDataGridViewTextBoxColumn
+            // 
+            this.hobbyDataGridViewTextBoxColumn.DataPropertyName = "Hobby";
+            this.hobbyDataGridViewTextBoxColumn.HeaderText = "Hobby";
+            this.hobbyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hobbyDataGridViewTextBoxColumn.Name = "hobbyDataGridViewTextBoxColumn";
+            this.hobbyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // marriedDataGridViewCheckBoxColumn
+            // 
+            this.marriedDataGridViewCheckBoxColumn.DataPropertyName = "Married";
+            this.marriedDataGridViewCheckBoxColumn.HeaderText = "Married";
+            this.marriedDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.marriedDataGridViewCheckBoxColumn.Name = "marriedDataGridViewCheckBoxColumn";
+            this.marriedDataGridViewCheckBoxColumn.Width = 125;
             // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 523);
+            this.ClientSize = new System.Drawing.Size(1357, 465);
+            this.Controls.Add(this.dtgCustomer);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -560,13 +656,17 @@
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MDIParent1";
-            this.Text = "MDIParent1";
+            this.Text = "MDIParent";
+            this.Load += new System.EventHandler(this.MDIParent1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,6 +728,16 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enterCustomerToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dtgCustomer;
+        private CustomerDBDataSet customerDBDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private CustomerDBDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hobbyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn marriedDataGridViewCheckBoxColumn;
     }
 }
 

@@ -1,0 +1,13 @@
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\bin\Debug\LabAss3.exe.config
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\bin\Debug\LabAss3.exe
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\bin\Debug\LabAss3.pdb
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.csproj.AssemblyReference.cache
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.csproj.SuggestedBindingRedirects.cache
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.Properties.Resources.resources
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.csproj.GenerateResource.cache
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.csproj.CoreCompileInputs.cache
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.exe
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.pdb
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.frmCustomerDataEntry.resources
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.frmCustomerPreview.resources
+E:\外交\大三下\MyRepos\DiLibaier-0504AllLabApp\LabAss3\obj\Debug\LabAss3.MDIParent1.resources

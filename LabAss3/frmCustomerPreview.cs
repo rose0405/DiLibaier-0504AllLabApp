@@ -30,5 +30,10 @@ namespace LabAss3
             lblHobby.Text = Hobby;
             lblStatus.Text=Status;
         }
+
+        private void frmCustomerPreview_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

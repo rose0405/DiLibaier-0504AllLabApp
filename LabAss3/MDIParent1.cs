@@ -110,5 +110,12 @@ namespace LabAss3
             obj.MdiParent = this;
             obj.Show();
         }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“customerDBDataSet.Customer”中。您可以根据需要移动或移除它。
+            this.customerTableAdapter.Fill(this.customerDBDataSet.Customer);
+
+        }
     }
 }
