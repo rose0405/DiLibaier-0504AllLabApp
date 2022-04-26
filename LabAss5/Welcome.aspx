@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>
-                Welcome <%Response.Write(Session["Uname"].ToString()); %>
+                Welcome <%Response.Write(Session["Username"].ToString()); %>
             </h1>
             <br />
             <asp:Button ID="Buttom1" runat="server" Text="Logout" OnClick="Button1_Click" />
