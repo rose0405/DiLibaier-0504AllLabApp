@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd1.jpg</ImageUrl>
+		<Width>200</Width>
+		<Height>150</Height>
+		<NavigateUrl>http://www.BannerAd1.com</NavigateUrl>
+		<AlternateText>This is BannerAd1</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd2.jpg</ImageUrl>
+		<Width>200</Width>
+		<Height>150</Height>
+		<NavigateUrl>http://www.BannerAd2.com</NavigateUrl>
+		<AlternateText>This is BannerAd2</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd3.jpg</ImageUrl>
+		<Width>200</Width>
+		<Height>150</Height>
+		<NavigateUrl>~/ads/BannerAd3.jpg</NavigateUrl>
+		<AlternateText>This is BannerAd3</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
+</Advertisements>
