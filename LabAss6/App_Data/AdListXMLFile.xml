@@ -45,7 +45,40 @@
 		<Impressions>25</Impressions>
 		<Keyword>ads2</Keyword>
 	</Ad>
-	
-	
-	
+	<Ad>
+		<ImageUrl>~/ads/adv9.jpg</ImageUrl>
+		<Width>200</Width>
+		<Height>150</Height>
+		<NavigateUrl>http://www.ad9.com</NavigateUrl>
+		<AlternateText>This is ad9</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads2</Keyword>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd1.gif</ImageUrl>
+		<Width>900</Width>
+		<Height>100</Height>
+		<NavigateUrl>http://www.Ad1.com</NavigateUrl>
+		<AlternateText>This is Ad1</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd2.gif</ImageUrl>
+		<Width>900</Width>
+		<Height>100</Height>
+		<NavigateUrl>http://www.Ad2.com</NavigateUrl>
+		<AlternateText>This is Ad2</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/ads/BannerAd3.gif</ImageUrl>
+		<Width>900</Width>
+		<Height>100</Height>
+		<NavigateUrl>http://www.Ad3.com</NavigateUrl>
+		<AlternateText>This is Ad3</AlternateText>
+		<Impressions>25</Impressions>
+		<Keyword>ads1</Keyword>
+	</Ad>
 </Advertisements>

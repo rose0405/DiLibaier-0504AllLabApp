@@ -6,17 +6,27 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 909px;
+            height: 98px;
+        }
+        .auto-style2 {
+            width: 299px;
+            height: 156px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="auto-stylet2">
-            <asp:AdRotator ID="AdRotator2" runat="server" AdvertisementFile="~/App_Data/AdListXMLFile1.xml" KeywordFilter="ads1" />
+        <div class="auto-style1">
+            <asp:AdRotator ID="AdRotator2" runat="server" AdvertisementFile="~/App_Data/AdListXMLFile.xml" KeywordFilter="ads1" />
             Ads1
         </div>
         <div>
         <h2>This is my advertisement page</h2>
             </div>
-        <div class="auto-stylet2">
+        <div class="auto-style2">
             <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/App_Data/AdListXMLFile.xml" KeywordFilter="ads2" OnAdCreated="AdRotator1_AdCreated" />
             Ads2
         </div>
